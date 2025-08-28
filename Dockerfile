@@ -1,4 +1,4 @@
-FROM go:3.12 AS builder
+FROM python:3.12-slim
 
 RUN apt install curl -y
 
