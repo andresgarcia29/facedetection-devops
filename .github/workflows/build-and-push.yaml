@@ -4,9 +4,11 @@ on:
   - push
 
 jobs:
-  Explore-GitHub-Actions:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-      - checkout
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run a command
+        run: ls -l
